@@ -319,6 +319,59 @@
         margin-top: auto;
       }
 
+     /* Projects Section */
+        .projects {
+            background: var(--bg-color);
+            text-align: center;
+        }
+
+        .projects .heading {
+            margin-bottom: 5rem;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .projects-container .project-card {
+            flex: 1 1 30rem;
+            background: var(--light-bg);
+            padding: 4rem;
+            border-radius: 2rem;
+            border: 0.3rem solid var(--light-bg);
+            transition: 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .projects-container .project-card:hover {
+            border-color: var(--secondary-color);
+            transform: scale(1.02);
+        }
+
+        .project-card h3 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+        }
+
+        .project-card p {
+            font-size: 1.6rem;
+            margin: 1rem 0 3rem;
+        }
+
+        .project-card .btn {
+            margin-top: auto;
+        }
+
+
       /* Testimonial Section */
       .testimonial {
         background: var(--bg-color);
