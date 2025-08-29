@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cisco Packet Tracer Project</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      :root {
+        --bg-color: #f7f9fc;
+        --main-color: #0d85ad;
+        --text-color: #333333;
+        --secondary-color: #2bffc3;
+        --light-bg: #e6e6fa;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: var(--main-color);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      section {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        max-width: 800px;
+        background: var(--light-bg);
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: var(--main-color);
+      }
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      code {
+        background: #fff;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: var(--main-color);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cisco Packet Tracer Project</h1>
+      <p>
+        Network design, configuration, and security analysis using Cisco Packet
+        Tracer.
+      </p>
+    </header>
+
+    <section class="screenshot">
+      <h2>📸 Network Topology Screenshot</h2>
+      <img
+        src="your-screenshot.jpg"
+        alt="Cisco Packet Tracer Network Topology"
+      />
+    </section>
+
+    <section class="problem">
+      <h2>🧩 Problem Statement</h2>
+      <p>
+        Design a small office network with VLAN segmentation, static routing,
+        and secure remote access. Ensure connectivity between departments while
+        maintaining isolation and security.
+      </p>
+    </section>
+
+    <section class="process">
+      <h2>⚙️ Configuration Process</h2>
+      <p>Here’s a summary of the steps and commands used:</p>
+      <ul>
+        <li>
+          <strong>VLAN Creation:</strong> <code>vlan 10</code>,
+          <code>name HR</code>
+        </li>
+        <li>
+          <strong>Interface Assignment:</strong> <code>interface fa0/1</code>,
+          <code>switchport access vlan 10</code>
+        </li>
+        <li>
+          <strong>Routing:</strong>
+          <code>ip route 192.168.2.0 255.255.255.0 192.168.1.1</code>
+        </li>
+        <li>
+          <strong>SSH Setup:</strong> <code>ip domain-name office.local</code>,
+          <code>crypto key generate rsa</code>,
+          <code>username admin password cisco123</code>
+        </li>
+      </ul>
+    </section>
+
+    <section class="security">
+      <h2>🔐 Network Security Suggestions</h2>
+      <ul>
+        <li>Implement ACLs to restrict inter-VLAN traffic.</li>
+        <li>Use strong passwords and enable password encryption.</li>
+        <li>Disable unused ports and enable port security.</li>
+        <li>Configure SSH instead of Telnet for remote access.</li>
+        <li>Regularly update firmware and monitor logs.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Your Name | <a href="index.html">Back to Portfolio</a></p>
+    </footer>
+  </body>
+</html>

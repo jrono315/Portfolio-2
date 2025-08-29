@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Tools & Techniques</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      :root {
+        /* Warm and inviting colors */
+        --bg-color: #f7f9fc;
+        --main-color: #0d85ad; /* Deep Purple */
+        --text-color: #333333;
+        --secondary-color: #2bffc3; /* Vibrant Yellow Accent */
+        --light-bg: #e6e6fa; /* Light Lavender */
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      header {
+        background: var(--main-color);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      #filters {
+        text-align: center;
+        margin: 1rem;
+      }
+
+      button {
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        background: var(--secondary-color);
+        color: var(--text-color);
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background: var(--main-color);
+        color: white;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .item {
+        background: var(--light-bg);
+        padding: 1rem;
+        border-radius: 8px;
+        width: 300px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .item:hover {
+        transform: scale(1.02);
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: var(--main-color);
+        color: white;
+      }
+    </style>
+
+    <script>
+      function filterItems(category) {
+        const items = document.querySelectorAll(".item");
+        items.forEach((item) => {
+          if (category === "all" || item.classList.contains(category)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Cybersecurity Tools & Techniques</h1>
+      <p>
+        Explore the tools and methods I've used in real-world labs and
+        simulations.
+      </p>
+    </header>
+
+    <section id="filters">
+      <button onclick="filterItems('all')">All</button>
+      <button onclick="filterItems('tools')">Tools</button>
+      <button onclick="filterItems('techniques')">Techniques</button>
+    </section>
+
+    <main id="items">
+      <div class="item tools">
+        <h2>Nmap</h2>
+        <p>
+          Used for network scanning and host discovery in penetration testing
+          labs.
+        </p>
+      </div>
+      <div class="item techniques">
+        <h2>Privilege Escalation</h2>
+        <p>
+          Identified misconfigurations to gain elevated access in TryHackMe
+          labs.
+        </p>
+      </div>
+      <div class="item tools">
+        <h2>Burp Suite</h2>
+        <p>
+          Intercepted and modified HTTP requests during web application testing.
+        </p>
+      </div>
+      <div class="item techniques">
+        <h2>Phishing Simulation</h2>
+        <p>
+          Created email campaigns to test user awareness and response behavior.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 John Rono - All Rights Reseverved |
+        <a href="index.html" class="btn">Back to Portfolio</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
