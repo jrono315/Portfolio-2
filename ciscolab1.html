@@ -80,7 +80,7 @@
     <section class="screenshot">
       <h2>📸 Network Topology Screenshot</h2>
       <img
-        src="your-screenshot.jpg"
+        src="Screenshot 2025-09-01 160552.png"
         alt="Cisco Packet Tracer Network Topology"
       />
     </section>
@@ -88,10 +88,64 @@
     <section class="problem">
       <h2>🧩 Problem Statement</h2>
       <p>
-        Design a small office network with VLAN segmentation, static routing,
-        and secure remote access. Ensure connectivity between departments while
-        maintaining isolation and security.
+        Design and implement a network for a company located in a three stored
+        building. The first floor has three departments; reception, stores, and
+        logistics, the second floor also has three departments; finance, HR, and
+        sales, and finally on the third floor there are two departments; Admin
+        and IT. The following are part of consideration during implementation:
       </p>
+      <ul>
+        <li>
+          Each floor should have a router all placed in the server room of IT
+          department.
+        </li>
+        <li>
+          All routers should be connected to each other using serial DCE cable.
+        </li>
+        <li>
+          Network between routers should be 10.10.10.0/30, 10.10.10.4/30,
+          10.10.10.8/30
+        </li>
+        <li>
+          Each floor is expected to have one switch placed in respective floors.
+        </li>
+        <li>
+          Each floor is expected to have WI-FI network for laptops and phones
+        </li>
+        <li>Each department is expected to have a printer.</li>
+        <li>
+          Each department is expected to be in a different VLAN with the
+          following details:
+        </li>
+        <ol>
+          1st Floor; Reception: VLAN 80 & IP 192.168..8.0/24, Store: VLAN 70 &
+          IP 192.168.7.0/24, Logistics: VLAN 60 & IP 192.168.6.0/24
+        </ol>
+        <ol>
+          2nd Floor; Finance: VLAN 50 & IP 192.168.5.0/24, HR: VLAN 40 & IP
+          192.1168.4.0/24, Sales: VLAN 30 & 192.168.3.0/24
+        </ol>
+        <ol>
+          3rd Floor; Admin VLAN 20 & IP 192.168.2.0/24, IT: VLAN 10 & IP
+          192.168.1.0/24
+        </ol>
+        <li>Use OSPF as routing protocol to advertise routers</li>
+        <li>
+          All devices in the network are expected to obtain IP address
+          dynamically with their repsective router configured as their DHCP
+          router.
+        </li>
+        <li>Configure SSH in all routers for remote login</li>
+        <li>
+          In IT department, add a PC called Test-PC to port fa0/1 and use it to
+          test remote login
+        </li>
+        <li>
+          Configure port security to IT-department switch to allow only Test-PC
+          to access port fa0/1 (use sticky method to obtain mac-address with
+          violation mode of shutdown)
+        </li>
+      </ul>
     </section>
 
     <section class="process">
